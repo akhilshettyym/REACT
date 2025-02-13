@@ -14,6 +14,8 @@ export default function TextForm(props) {
         setText("");
     };
 
+    
+
     const handleOnChange = (event) => {
         setText(event.target.value);
     };
@@ -50,6 +52,7 @@ export default function TextForm(props) {
                     <button className="btn btn-primary" onClick={handleLoClick}>
                         Lowercase
                     </button>
+
 
                     <button className="btn btn-danger" onClick={handleClearClick}>
                         Clear
