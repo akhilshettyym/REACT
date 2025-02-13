@@ -19,6 +19,12 @@ export default function TextForm(props) {
         text.select();
         navigator.clipboard.writeText(text.value);
     };
+
+    const handleExtraSpaces = () => {
+        let newText = text.split(/[ ]+/);
+        setText(newText.join(" "));
+    };
+ 
  
 
     const handleOnChange = (event) => {
@@ -60,6 +66,10 @@ export default function TextForm(props) {
 
                     <button className="btn btn-primary" onClick={handleCopy}>
                        Copy Text
+                   </button>
+
+                   <button className="btn btn-primary" onClick={handleExtraSpaces}>
+                       Remove Extra Spaces
                    </button>
 
                     <button className="btn btn-danger" onClick={handleClearClick}>
