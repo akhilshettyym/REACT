@@ -24,8 +24,6 @@ export default function TextForm(props) {
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "));
     };
- 
- 
 
     const handleOnChange = (event) => {
         setText(event.target.value);
@@ -42,19 +40,20 @@ export default function TextForm(props) {
 
     return (
         <>
-            <div className="container d-flex flex-column align-items-center mt-4">
+            <div className="container d-flex flex-column align-items-center mt-4" style={{color: props.mode === 'dark' ? 'white' : 'black'}}>
                 <h1 className="text-center">{props.heading}</h1>
                 <div className="mb-3 w-75">
                     <textarea
                         className="form-control"
                         value={text}
                         onChange={handleOnChange}
+                        style={{backgroundColor: props.mode === 'dark' ? '#181818' : 'white', color: props.mode === 'dark' ? 'white' : 'black'}}
                         id="myBox"
                         rows="8"
                     ></textarea>
                 </div>
 
-                {/* Buttons Container (Side by Side) */}
+                {/* Buttons Container which will be side by side else could be done in different way too*/}
                 <div className="d-flex gap-2">
                     <button className="btn btn-primary" onClick={handleUpClick}>
                         Uppercase
@@ -77,7 +76,7 @@ export default function TextForm(props) {
                     </button>
                 </div>
 
-                {/* Find & Replace Section */}
+                {/* Find and Replace bro*/}
                 <div className="mt-4 w-75">
                     <h3>Find & Replace</h3>
                     <div className="d-flex gap-2">
@@ -87,6 +86,7 @@ export default function TextForm(props) {
                             placeholder="Find..."
                             value={findWord}
                             onChange={(e) => setFindWord(e.target.value)}
+                            style={{backgroundColor: props.mode === 'dark' ? '#181818' : 'white', color: props.mode === 'dark' ? 'white' : 'black'}}
                         />
                         <input
                             type="text"
@@ -94,6 +94,7 @@ export default function TextForm(props) {
                             placeholder="Replace with..."
                             value={replaceWord}
                             onChange={(e) => setReplaceWord(e.target.value)}
+                            style={{backgroundColor: props.mode === 'dark' ? '#181818' : 'white', color: props.mode === 'dark' ? 'white' : 'black'}}
                         />
                         <button className="btn btn-success" onClick={handleFindReplace}>
                             Replace
@@ -102,16 +103,13 @@ export default function TextForm(props) {
                 </div>
             </div>
 
-
-            <div className="container my-2">
+            <div className="container my-2" style={{color: props.mode === 'dark' ? 'white' : 'black'}}>
                 <h2>Your text summary</h2>
-                <p>{text.split(" ").length} words and {text.length} characters</p>
-                <p>{0.008 * (text.split(" ").length)} Minute is required to finish reading.</p>
+                <p>{text.split(" ").filter(word => word !== "").length} words and {text.length} characters</p>
+                <p>{0.008 * (text.split(" ").filter(word => word !== "").length)} Minute is required to finish reading.</p>
                 <h3>Preview</h3>
-                <p>{text}</p>
+                <p>{text.length > 0 ? text : "Enter the data above to preview it.!!!"}</p>
             </div>
-
-
         </>
     );
 }

@@ -42,3 +42,11 @@
   color: #282c34;
   
 }
+
+::placeholder {
+  color: black;
+}
+
+.dark-mode ::placeholder {
+  color: rgb(120, 119, 119);
+}
