@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/REACT/tree/main/proreact/static/css/main.4e0ac040.css",
+    "main.js": "/REACT/tree/main/proreact/static/js/main.51637766.js",
+    "static/js/488.9c92ff38.chunk.js": "/REACT/tree/main/proreact/static/js/488.9c92ff38.chunk.js",
+    "index.html": "/REACT/tree/main/proreact/index.html",
+    "main.4e0ac040.css.map": "/REACT/tree/main/proreact/static/css/main.4e0ac040.css.map",
+    "main.51637766.js.map": "/REACT/tree/main/proreact/static/js/main.51637766.js.map",
+    "488.9c92ff38.chunk.js.map": "/REACT/tree/main/proreact/static/js/488.9c92ff38.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e0ac040.css",
+    "static/js/main.51637766.js"
+  ]
+}
