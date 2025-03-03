@@ -1,5 +1,5 @@
 import React, { useState }  from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
 function App() {
 
@@ -21,13 +21,16 @@ function App() {
         </div>
         <div className="bottom">
           <div className="feels">
-            <p>Feels like: 65°C</p>
+            <p className='bold'>65 Deg F</p>
+            <p>Feels like</p>
           </div>
           <div className="humidity">
-            <p>Humidity: 20%</p>
+            <p className='bold'>20%</p>
+            <p>Humidity</p>
           </div>
           <div className="wind">
-            <p>Wind Speed: 10 km/h</p>
+            <p className='bold'>10 km/h</p>
+            <p>Wind Speed</p>
           </div>
         </div>
       </div>
