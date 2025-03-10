@@ -33,12 +33,12 @@ const App = () => {
   
       if (!response.ok) throw new Error(data.error?.message || "Something went wrong!");
   
-      // ✅ Fix: Ensure response structure is valid
+      
       if (!data.candidates || !data.candidates[0]?.content?.parts[0]?.text) {
         throw new Error("Unexpected API response format");
       }
   
-      // ✅ Fix: Correctly extract text
+      
       const apiResponse = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim();
   
       updateHistory(apiResponse);
