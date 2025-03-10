@@ -68,7 +68,7 @@ const App = () => {
         <div className="chat-header">
           <div className="header-info">
             <ChatbotIcon /> {/* Display chatbot icon */}
-            <h2 className="logo-text">Chatbot</h2> {/* Chatbot title */}
+            <h2 className="logo-text">ChatNest</h2> {/* Chatbot title */}
           </div>
           <button className="material-symbols-rounded">keyboard_arrow_down</button> {/* Button to collapse chatbot */}
         </div>
@@ -78,7 +78,7 @@ const App = () => {
           {/* Initial greeting message from the bot */}
           <div className="message bot-message">
             <ChatbotIcon />
-            <p className="message-text">Hey there <br /> How can I assist you today?</p>
+            <p className="message-text">Hey there!👋<br /> How can I assist you today? </p>
           </div>
 
           {/* Render the chat history dynamically */}
