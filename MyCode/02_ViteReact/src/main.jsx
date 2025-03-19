@@ -34,4 +34,4 @@ createRoot(document.getElementById('root')).render(
     {/* Render element created with JSX */}
     {anotherElement}
   </StrictMode>
-)
+) 
