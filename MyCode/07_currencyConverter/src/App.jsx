@@ -39,7 +39,7 @@ function App() {
       }}
     >
       <div className="container mx-auto px-4">
-        <div className="w-full max-w-md mx-auto border border-gray-400 rounded-lg p-5 backdrop-blur-sm bg-white/30 shadow-lg">
+        <div className="w-full max-w-md mx-auto border-2 border-white rounded-lg p-6 backdrop-blur-md bg-white/20 shadow-[0_0_15px_rgba(0,0,0,0.3)] hover:shadow-[0_0_20px_rgba(0,0,0,0.4)] transition-all duration-300">
           <form
             onSubmit={(e) => {
               e.preventDefault()
@@ -60,7 +60,7 @@ function App() {
             <div className="relative w-full h-0.5 my-4">
               <button
                 type="button"
-                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5 hover:bg-blue-700 transition-colors"
+                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-3 py-1 hover:bg-blue-700 transition-colors shadow-md"
                 onClick={swap}
               >
                 swap
@@ -78,7 +78,7 @@ function App() {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium shadow-md"
             >
               Convert {from.toUpperCase()} to {to.toUpperCase()}
             </button>
