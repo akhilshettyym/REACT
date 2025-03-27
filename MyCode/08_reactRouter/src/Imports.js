@@ -6,7 +6,8 @@ import Home from './components/Home/Home'
 import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import Layout from './Layout'
+import User from './components/User/User';
 
 
 
-export { Home, About, Contact, Layout, StrictMode, createRoot, createBrowserRouter ,RouterProvider, Route}
+export { Home, About, Contact, Layout, StrictMode, createRoot, createBrowserRouter ,RouterProvider, Route, User}

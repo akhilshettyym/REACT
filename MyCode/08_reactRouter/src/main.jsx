@@ -1,5 +1,6 @@
 import { createRoutesFromElements } from 'react-router-dom';
-import { Home, About, Contact, Layout, StrictMode, createRoot, createBrowserRouter ,RouterProvider, Route} from './Imports';
+import { Home, About, Contact, Layout, StrictMode, createRoot, createBrowserRouter ,RouterProvider, Route, User} from './Imports';
+
 
 // const router = createBrowserRouter([
 //   {
@@ -27,7 +28,8 @@ const router = createBrowserRouter(
       <Route path='' element={<Home />} />
       <Route path='about' element={<About />} />
       <Route path='contact' element={<Contact />} />
-</Route>
+      <Route path='user/:userid' element={<User />} />
+    </Route>
   )
 )
 
