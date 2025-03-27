@@ -1,5 +1,4 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { React, Link, NavLink } from '../../Imports'
 
 export default function Header() {
     return (

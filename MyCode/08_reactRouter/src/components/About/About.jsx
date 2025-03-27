@@ -1,5 +1,4 @@
-import React from 'react';
-import img3 from "../../assets/img3.jpeg";
+import { React, img3 } from '../../Imports'
 
 export default function About() {
   return (

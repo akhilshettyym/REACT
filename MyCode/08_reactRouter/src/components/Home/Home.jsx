@@ -1,7 +1,4 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import img1 from "../../assets/img1.jpeg";
-import img2 from "../../assets/img2.jpeg";
+import { React, Link, img1, img2 } from '../../Imports'
 
 
 export default function Home() {

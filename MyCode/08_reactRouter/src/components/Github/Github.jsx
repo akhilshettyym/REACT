@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { useLoaderData } from 'react-router-dom'
+import { React, useLoaderData } from '../../Imports'
 
 const Github = () => {
     const data = useLoaderData();
