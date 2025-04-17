@@ -1,0 +1,44 @@
+✅ Step 2: Setting Up React
+There are 2 common ways to start:
+
+Option 1: Using create-react-app (CRA) — Local Setup (Beginner Friendly)
+Option 2: Using CodeSandbox — Online (No Installation)
+Let’s start with Option 1. If you’d prefer online (Option 2), let me know!
+
+💻 Option 1: Create a React App (Local Setup)
+You'll need:
+
+Node.js installed: https://nodejs.org/ (LTS version recommended)
+
+A code editor, like VS Code
+🧱 Step-by-step:
+Open Terminal / Command Prompt
+
+Run this command:
+npx create-react-app my-first-react-app
+This will create a folder my-first-react-app with everything set up
+
+Go into your project:
+cd my-first-react-app
+Start the development server:
+
+npm start
+App will open in the browser at http://localhost:3000 showing the React logo.
+
+
+🧪 What’s Inside the Project?
+Your folder structure will look like this:
+
+my-first-react-app/
+├── public/
+├── src/
+│   ├── App.js        ← Your main component
+│   ├── index.js      ← Renders App into root div
+├── package.json
+
+
+✅ Try Editing:
+Open src/App.js, and change:
+
+<h1>Hello React!</h1>
+Save — the browser updates automatically. 🔁🔥
