@@ -46,6 +46,7 @@ const fragmentExample = (
   <>
     <p>I am a paragraph.</p>
     <p>I am another paragraph.</p>
+    <p>I am another other paragraph.</p>
   </>
 );
 
