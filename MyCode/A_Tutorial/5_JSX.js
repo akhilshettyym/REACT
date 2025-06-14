@@ -31,6 +31,8 @@ const listElement = (
     <li>Apples</li>
     <li>Bananas</li>
     <li>Cherries</li>
+    <li>Apple</li>
+    <li>Mango</li>
   </ul>
 );
 
