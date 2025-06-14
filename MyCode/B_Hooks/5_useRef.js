@@ -5,17 +5,17 @@ import { useState, useEffect, useRef } from "react";
 import ReactDOM from "react-dom/client";
 
 function App() {
-  // 🧠 State for input value
+  // State for input value
   const [inputValue, setInputValue] = useState("");
 
-  // 📌 1. useRef for render count (does NOT trigger re-render)
+  // 1. useRef for render count (does NOT trigger re-render)
   const renderCount = useRef(1); // Initialized with 1
 
   useEffect(() => {
     renderCount.current += 1; // Updates on every render but doesn't cause re-render
   });
 
-  // 📌 2. useRef for DOM access (to focus input)
+  // 2. useRef for DOM access (to focus input)
   const inputRef = useRef(null);
 
   const handleFocus = () => {
@@ -23,7 +23,7 @@ function App() {
     inputRef.current.focus();
   };
 
-  // 📌 3. useRef to track previous state
+  // 3. useRef to track previous state
   const prevInputValue = useRef(""); // Initialize empty string
 
   useEffect(() => {
@@ -54,9 +54,9 @@ function App() {
 
       {/* Rendered values */}
       <div style={{ marginTop: "20px" }}>
-        <h3>🟢 Current Input Value: {inputValue}</h3>
-        <h3>🕐 Previous Input Value: {prevInputValue.current}</h3>
-        <h3>🔄 Render Count: {renderCount.current}</h3>
+        <h3>Current Input Value: {inputValue}</h3>
+        <h3>Previous Input Value: {prevInputValue.current}</h3>
+        <h3>Render Count: {renderCount.current}</h3>
       </div>
     </div>
   );
