@@ -1,19 +1,19 @@
 // File: App.js (or index.js if you're not using a bundler with App.js setup)
 
-// 🧠 React hooks and functions
+// React hooks and functions
 import { useState, createContext, useContext } from "react";
 import ReactDOM from "react-dom/client";
 
-// 🎯 1. Create the context
+// 1. Create the context
 const UserContext = createContext();
 
-// 🎯 2. Top-level component holding the global user state
+// 2. Top-level component holding the global user state
 function Component1() {
   // This state will be shared across deeply nested components
   const [user, setUser] = useState("Jesse Hall");
 
   return (
-    // 🧩 Provide the user context value to all child components
+    // Provide the user context value to all child components
     <UserContext.Provider value={user}>
       <h1>{`Hello ${user}!`}</h1>
       <Component2 />
@@ -21,7 +21,7 @@ function Component1() {
   );
 }
 
-// ✅ Component2 does NOT need the user state but passes to Component3
+// Component2 does NOT need the user state but passes to Component3
 function Component2() {
   return (
     <>
@@ -31,7 +31,7 @@ function Component2() {
   );
 }
 
-// ✅ Component3 does NOT need the user state but passes to Component4
+// Component3 does NOT need the user state but passes to Component4
 function Component3() {
   return (
     <>
@@ -41,7 +41,7 @@ function Component3() {
   );
 }
 
-// ✅ Component4 does NOT need the user state but passes to Component5
+// Component4 does NOT need the user state but passes to Component5
 function Component4() {
   return (
     <>
@@ -51,9 +51,9 @@ function Component4() {
   );
 }
 
-// 🧠 3. Component5 uses useContext to access user data directly
+// 3. Component5 uses useContext to access user data directly
 function Component5() {
-  // 💡 Grab the user value from context without prop drilling
+  // Grab the user value from context without prop drilling
   const user = useContext(UserContext);
 
   return (
@@ -64,6 +64,6 @@ function Component5() {
   );
 }
 
-// 🏁 4. Render the root component
+// 4. Render the root component
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<Component1 />);
