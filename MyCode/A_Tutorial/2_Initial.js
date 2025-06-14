@@ -1,7 +1,7 @@
 // Basic React setup with explanations:
 
 // Step 1: Import React and ReactDOM libraries
-import React from 'react';
+// import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 // Step 2: Create a simple React component
