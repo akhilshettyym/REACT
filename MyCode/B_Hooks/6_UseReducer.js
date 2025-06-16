@@ -1,5 +1,5 @@
-import { useReducer } from "react"; // Import useReducer hook
-import ReactDOM from "react-dom/client"; // For rendering
+import { useReducer } from "react";
+import ReactDOM from "react-dom/client";
 
 // Initial list of todos
 const initialTodos = [
