@@ -1,4 +1,3 @@
-// Import necessary React hooks
 import { useState, useEffect } from "react";
 
 // Define the custom hook 'useFetch' which takes a URL as argument
