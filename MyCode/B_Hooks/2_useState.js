@@ -17,9 +17,8 @@ function FavoriteColor() {
       {/* Button to change color to blue */}
       <button
         type="button"
-        onClick={() => setColor("blue")} // Update 'color' state to "blue" on click
-      >
-        Blue
+        onClick={() => setColor("blue")} // Update 'color' state to "blue" on click>
+      > Blue
       </button>
       
       {/* Button to change color to red */}
