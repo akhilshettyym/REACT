@@ -1,4 +1,3 @@
-// Import React and the useState Hook from the react library
 import React, { useState } from "react";
 // Import ReactDOM to render the component
 import ReactDOM from "react-dom/client";
