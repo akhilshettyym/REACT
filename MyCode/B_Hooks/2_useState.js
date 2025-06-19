@@ -1,6 +1,4 @@
-// Import the useState Hook from React
 import { useState } from "react";
-// Import ReactDOM for rendering the component
 import ReactDOM from "react-dom/client";
 
 // Define a functional component
