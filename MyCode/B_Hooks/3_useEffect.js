@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-// Import ReactDOM to render components
 import ReactDOM from "react-dom/client";
 
 // Example 1: Basic useEffect with no dependency - runs after every render
