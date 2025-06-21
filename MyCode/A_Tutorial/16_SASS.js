@@ -34,7 +34,6 @@ const App = () => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 
-
 /*
 How to make this work:
 Save the Sass code in a file named styles.scss in the same directory.
