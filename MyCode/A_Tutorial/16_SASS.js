@@ -36,11 +36,9 @@ root.render(<App />);
 
 
 /*
-
 How to make this work:
 Save the Sass code in a file named styles.scss in the same directory.
 Run npm install sass once in your project directory.
 Import './styles.scss' in your React entry point (index.js or App.js).
 Start your React app with npm start.
-
 */
