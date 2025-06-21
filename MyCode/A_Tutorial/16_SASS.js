@@ -1,4 +1,3 @@
-
 // Define a variable for text color
 $myColor: teal;
 
