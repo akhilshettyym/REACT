@@ -15,7 +15,6 @@ const myElementNoJSX = React.createElement('h1', {}, 'I do not use JSX!');
 const root2 = ReactDOM.createRoot(document.getElementById('root'));
 root2.render(myElementNoJSX);
 
-
 // Example 3: Expressions inside JSX
 const number = 5 + 5; // JavaScript expression
 const myExpressionElement = <h1>React is {number} times better with JSX</h1>;
@@ -23,7 +22,6 @@ const myExpressionElement = <h1>React is {number} times better with JSX</h1>;
 // Render expression example
 const root3 = ReactDOM.createRoot(document.getElementById('root'));
 root3.render(myExpressionElement);
-
 
 // Example 4: Writing HTML block over multiple lines inside parentheses
 const listElement = (
