@@ -7,7 +7,6 @@ const myElementJSX = <h1>I Love JSX!</h1>;
 const root1 = ReactDOM.createRoot(document.getElementById('root'));
 root1.render(myElementJSX);
 
-
 // Example 2: Creating React elements without JSX (using createElement)
 const myElementNoJSX = React.createElement('h1', {}, 'I do not use JSX!');
 
@@ -38,7 +37,6 @@ const listElement = (
 const root4 = ReactDOM.createRoot(document.getElementById('root'));
 root4.render(listElement);
 
-
 // Example 5: Multiple elements wrapped in a fragment (<> </>)
 const fragmentExample = (
   <>
@@ -52,14 +50,12 @@ const fragmentExample = (
 const root5 = ReactDOM.createRoot(document.getElementById('root'));
 root5.render(fragmentExample);
 
-
 // Example 6: Properly closing elements, such as input with self-closing tag
 const inputElement = <input type="text" />;
 
 // Render the input element
 const root6 = ReactDOM.createRoot(document.getElementById('root'));
 root6.render(inputElement);
-
 
 // Example 7: Using className instead of class
 const classNameExample = <h1 className="myclass">Hello World</h1>;
@@ -68,7 +64,6 @@ const classNameExample = <h1 className="myclass">Hello World</h1>;
 const root7 = ReactDOM.createRoot(document.getElementById('root'));
 root7.render(classNameExample);
 
-
 // Example 8: Conditional rendering with ternary operator
 const x = 7;
 const conditionalElement = <h1>{x < 10 ? 'Hello' : 'Goodbye'}</h1>;
@@ -76,7 +71,6 @@ const conditionalElement = <h1>{x < 10 ? 'Hello' : 'Goodbye'}</h1>;
 // Render the conditional element
 const root8 = ReactDOM.createRoot(document.getElementById('root'));
 root8.render(conditionalElement);
-
 
 // Note:
 // - Only one root.render() call per root, so to display multiple things, you need separate containers or update content accordingly.
