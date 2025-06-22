@@ -47,16 +47,16 @@ class Car extends React.Component {
     this.setState({ color: 'green' });
   }
 
-  // 🔷 Render method
+  // Render method
   render() {
     return (
       <div style={{ padding: '20px', border: '2px solid black', width: '300px' }}>
-        <h2>🚗 {this.state.brand} {this.state.model}</h2>
+        <h2>{this.state.brand} {this.state.model}</h2>
         <p>Color: <strong>{this.state.color}</strong></p>
         <p>Year: {this.state.year}</p>
 
         {/* Props usage */}
-        <p>📦 Passed from parent: <strong>{this.props.engineType}</strong></p>
+        <p>Passed from parent: <strong>{this.props.engineType}</strong></p>
 
         {/* Event handling */}
         <button onClick={this.changeColor}>Change Color to Green</button>
@@ -65,7 +65,7 @@ class Car extends React.Component {
   }
 }
 
-// 🔷 Main App component
+// Main App component
 class App extends React.Component {
   render() {
     return (
@@ -78,6 +78,6 @@ class App extends React.Component {
   }
 }
 
-// 🔷 Mount React App
+// Mount React App
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
