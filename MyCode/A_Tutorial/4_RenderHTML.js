@@ -3,7 +3,7 @@
 // Step 1: Import React and ReactDOM
 // Note: In a real React environment, you'd use import statements, but for CDN use, 
 // include React via script tags in HTML.
-import React from 'react';
+// import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 // Step 2: Get DOM elements where React will render components
