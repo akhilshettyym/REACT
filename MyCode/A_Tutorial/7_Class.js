@@ -6,7 +6,7 @@ class Car extends React.Component {
   constructor(props) {
     super(props); // Always call super(props) to initialize parent class
 
-    // 🔷 Initialize component state
+    //  Initialize component state
     this.state = {
       brand: 'Ford',
       model: 'Mustang',
@@ -18,7 +18,7 @@ class Car extends React.Component {
     this.changeColor = this.changeColor.bind(this);
   }
 
-  // 🔷 Lifecycle Method - Mounting
+  //  Lifecycle Method - Mounting
   componentDidMount() {
     console.log('✅ componentDidMount: Car component mounted.');
 
@@ -28,11 +28,11 @@ class Car extends React.Component {
     }, 2000);
   }
 
-  // 🔷 Lifecycle Method - Updating
+  //  Lifecycle Method - Updating
   componentDidUpdate(prevProps, prevState) {
     if (prevState.color !== this.state.color) {
       console.log(
-        `🔄 componentDidUpdate: Color changed from ${prevState.color} to ${this.state.color}`
+        ` componentDidUpdate: Color changed from ${prevState.color} to ${this.state.color}`
       );
     }
   }
