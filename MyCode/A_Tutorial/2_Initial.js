@@ -15,7 +15,6 @@ const root = ReactDOM.createRoot(container);
 root.render(<Welcome />);
 
 // Explanation of key points:
-
 /*
 1. To use React in production, you need Node.js and npm installed.
 2. You can write React code directly in HTML using CDN links and Babel for JSX syntax, suitable for testing.
@@ -28,7 +27,6 @@ root.render(<Welcome />);
     - Launch it with: npm start
 7. You can modify the main component to customize your app.
 */
-
 // Example: simplest React implementation in an HTML file using CDN and Babel:
 `
 <!DOCTYPE html>
@@ -52,5 +50,4 @@ root.render(<Welcome />);
 </body>
 </html>
 `
-
 // This method is good for quick testing but not suitable for production.
