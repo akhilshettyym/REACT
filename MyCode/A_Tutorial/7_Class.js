@@ -18,9 +18,9 @@ class Car extends React.Component {
     this.changeColor = this.changeColor.bind(this);
   }
 
-  //  Lifecycle Method - Mounting
+  // Lifecycle Method - Mounting
   componentDidMount() {
-    console.log('✅ componentDidMount: Car component mounted.');
+    console.log(' componentDidMount: Car component mounted.');
 
     // Simulate a data fetch or DOM setup
     setTimeout(() => {
@@ -28,7 +28,7 @@ class Car extends React.Component {
     }, 2000);
   }
 
-  //  Lifecycle Method - Updating
+  // Lifecycle Method - Updating
   componentDidUpdate(prevProps, prevState) {
     if (prevState.color !== this.state.color) {
       console.log(
@@ -37,12 +37,12 @@ class Car extends React.Component {
     }
   }
 
-  // 🔷 Lifecycle Method - Unmounting (Optional)
+  // Lifecycle Method - Unmounting (Optional)
   componentWillUnmount() {
     console.log('🧹 componentWillUnmount: Cleaning up...');
   }
 
-  // 🔷 Custom method to change color
+  // Custom method to change color
   changeColor() {
     this.setState({ color: 'green' });
   }
