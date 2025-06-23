@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-    <h1>I am React useEffect in {}</h1>
+    <h1>I am React useEffect in {color}</h1>
     <button onClick={changeMeBlack}>Black</button>
     <button onClick={changeMeBlue}>Blue</button>
     </>
