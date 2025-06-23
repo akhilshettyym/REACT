@@ -6,6 +6,7 @@ function App() {
 
   const [black, setBlack] = useState(color);
   const [blue, setBlue] = useState(color);
+  const [purple, setPurple] = useState(color);
 
   const changeMeBlack = () => {
     setBlack('Black');
