@@ -4,7 +4,6 @@ import { useState } from 'react';
 function App() {
   const color = "Red";
 
-  // Initialize states as strings
   const [black, setBlack] = useState(color);
   const [blue, setBlue] = useState(color);
 
@@ -18,7 +17,7 @@ function App() {
 
   return (
     <>
-      <h1>I am React useEffect in {color}</h1>
+      <h1>I am React useState in {color}</h1>
       <p>Black Color: {black}</p>
       <p>Blue Color: {blue}</p>
       <button onClick={changeMeBlack}>Black</button>
