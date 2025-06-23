@@ -16,6 +16,10 @@ function App() {
     setBlue('Blue');
   };
 
+  const changeMePurple = () => {
+    setPurple('Purple');
+  };
+
   return (
     <>
       <h1>I am React useState in {color}</h1>
