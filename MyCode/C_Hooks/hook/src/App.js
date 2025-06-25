@@ -29,8 +29,8 @@ function App() {
       <h1>I am React useState in {color}</h1>
       <p>Black Color: {black}</p>
       <p>Blue Color: {blue}</p>
-      <p>Purple Color: {blue}</p>
-      <p>Purple Color: {White}</p>
+      <p>Purple Color: {purple}</p>
+      <p>White Color: {white}</p>
       <button onClick={changeMeBlack}>Black</button>
       <button onClick={changeMeBlue}>Blue</button>
       <button onClick={changeMePurple}>Purple</button>
