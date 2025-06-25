@@ -34,7 +34,7 @@ function App() {
       <button onClick={changeMeBlack}>Black</button>
       <button onClick={changeMeBlue}>Blue</button>
       <button onClick={changeMePurple}>Purple</button>
-      <button onClick={changeMePurple}>White</button>
+      <button onClick={changeMeWhite}>White</button>
     </>
   );
 }
