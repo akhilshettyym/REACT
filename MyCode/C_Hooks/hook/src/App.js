@@ -7,6 +7,7 @@ function App() {
   const [black, setBlack] = useState(color);
   const [blue, setBlue] = useState(color);
   const [purple, setPurple] = useState(color);
+  const [white, setWhite] = useState(color);
 
   const [count, setCount] = useState(0);
 
@@ -23,11 +24,11 @@ function App() {
   };
 
   const changeMeWhite = () => {
-    setPurple('White');
+    setWhite('White');
   };
 
   const changeMe = () => {
-    setCount = setCount + 1;
+    setCount(count+1);
   }
 
   return (
@@ -42,6 +43,7 @@ function App() {
       <button onClick={changeMePurple}>Purple</button>
       <button onClick={changeMeWhite}>White</button>
       <div>The count is {count}</div>
+      {/* <button onClick={()=>{setCount(count+1)}}>Update Count</button> */}
       <button onClick={changeMe}>Update Count</button>
 
     </>
