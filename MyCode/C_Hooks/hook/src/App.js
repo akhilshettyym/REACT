@@ -8,6 +8,8 @@ function App() {
   const [blue, setBlue] = useState(color);
   const [purple, setPurple] = useState(color);
 
+  const [count, setCount] = useState(0);
+
   const changeMeBlack = () => {
     setBlack('Black');
   };
@@ -24,6 +26,10 @@ function App() {
     setPurple('White');
   };
 
+  const changeMe = () => {
+    setCount = setCount + 1;
+  }
+
   return (
     <>
       <h1>I am React useState in {color}</h1>
@@ -35,6 +41,9 @@ function App() {
       <button onClick={changeMeBlue}>Blue</button>
       <button onClick={changeMePurple}>Purple</button>
       <button onClick={changeMeWhite}>White</button>
+      <div>The count is {count}</div>
+      <button onClick={changeMe}>Update Count</button>
+
     </>
   );
 }
