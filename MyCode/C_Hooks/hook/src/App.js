@@ -38,7 +38,7 @@ function App() {
       <button onClick={changeMePurple}>Purple</button>
 
       <div>The count is {count}</div>
-      {/* <button onClick={()=>{setCount(count+1)}}>Update Count</button> */} 
+      {/* <button onClick={()=>{setCount(count+1)}}>Update Count</button> */}
       <button onClick={changeMe}>Update Count</button>
 
     </>
