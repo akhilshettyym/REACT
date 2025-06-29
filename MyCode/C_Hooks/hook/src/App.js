@@ -9,7 +9,8 @@ function App() {
 
   useEffect(() => {
    alert("Count was updated");
-  }, [count]);
+  }, [count]);              
+  // The above useEffect will render twice because of strict mode in React 18.
 
   const [black, setBlack] = useState(color);
   const [blue, setBlue] = useState(color);
