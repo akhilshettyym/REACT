@@ -2,6 +2,11 @@ import { useState } from 'react';
 
 function App() {
   const color = "Red";
+  
+  useEffect(() => {
+   alert("Welcome to React useState Hook Example");
+  }, []);
+  
 
   const [black, setBlack] = useState(color);
   const [blue, setBlue] = useState(color);
