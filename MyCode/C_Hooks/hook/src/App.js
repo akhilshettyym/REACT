@@ -3,9 +3,9 @@ import Navbar from './components/Navbar';
 
 function App() {
   const color = "Red";
-  
+
   useEffect(() => {
-   alert("Welcome to React useState Hook Example");
+    alert("Welcome to React useState Hook Example");
   }, []);
 
 
@@ -32,13 +32,13 @@ function App() {
   }
 
   useEffect(() => {
-   alert("Count was updated");
-  }, [count]);              
+    alert("Count was updated");
+  }, [count]);
   // The above useEffect will render twice because of strict mode in React 18.
-  
+
   return (
     <>
-    <Navbar color={"navy" + " blue"} />
+      <Navbar color={"navy" + " blue"} />
       <h1>I am React useState in {color}</h1>
       <p>Black Color: {black}</p>
       <p>Blue Color: {blue}</p>
