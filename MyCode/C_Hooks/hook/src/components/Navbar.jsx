@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Navbar = ({color}) => {
+const Navbar = ({ color }) => {
   return (
     <div>
       I am a Navbar of {color} color... heeh
