@@ -6,7 +6,10 @@ function App() {
   useEffect(() => {
    alert("Welcome to React useState Hook Example");
   }, []);
-  
+
+  useEffect(() => {
+   alert("Count was updated");
+  }, [count]);
 
   const [black, setBlack] = useState(color);
   const [blue, setBlue] = useState(color);
@@ -29,7 +32,7 @@ function App() {
   const changeMe = () => {
     setCount(count + 1);
   }
-
+  
   return (
     <>
       <h1>I am React useState in {color}</h1>
