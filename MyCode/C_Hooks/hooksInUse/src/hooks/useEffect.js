@@ -2,15 +2,15 @@ import { useState, useEffect } from 'react';
 
 function UseEffect() {
 
-    const [count, setCount] = useState(0);
+    const [count] = useState(0);
     //   useEffect hook pops an alert when it renders for the first time
     useEffect(() => {
-        alert("Welcome to React useState Hook Example");
+        alert("Welcome to React Hooks Example");
     }, []);
 
-    const changeMe = () => {
-        setCount(count + 1);
-    }
+    // const changeMe = () => {
+    //     setCount(count + 1);
+    // }
 
     useEffect(() => {
         alert("Count was updated");
@@ -19,9 +19,9 @@ function UseEffect() {
 
     return (
         <>
-            <div>The count is {count}</div>
+            {/* <div>The count is {count}</div> */}
             {/* <button onClick={()=>{setCount(count+1)}}>Update Count</button> */}
-            <button type="button" class="btn btn-outline-danger" onClick={changeMe}>Update Count</button>
+            {/* <button type="button" class="btn btn-outline-danger" onClick={changeMe}>Update Count</button> */}
         </>
     );
 }
