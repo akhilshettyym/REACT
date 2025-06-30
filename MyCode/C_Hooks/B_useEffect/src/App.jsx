@@ -1,35 +1,59 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from 'react';
+import Navbar from './components/Navbar';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const color = "Red";
+
+  useEffect(() => {
+    alert("Welcome to React useState Hook Example");
+  }, []);
+
+
+  const [black, setBlack] = useState(color);
+  const [blue, setBlue] = useState(color);
+  const [purple, setPurple] = useState(color);
+
+  const [count, setCount] = useState(0);
+
+  const changeMeBlack = () => {
+    setBlack('Black');
+  };
+
+  const changeMeBlue = () => {
+    setBlue('Blue');
+  };
+
+  const changeMePurple = () => {
+    setPurple('Purple');
+  };
+
+  const changeMe = () => {
+    setCount(count + 1);
+  }
+
+  useEffect(() => {
+    alert("Count was updated");
+  }, [count]);
+  // The above useEffect will render twice because of strict mode in React 18.
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar color={"navy" + " blue"} />
+      <h1>I am React useState in {color}</h1>
+      <p>Black Color: {black}</p>
+      <p>Blue Color: {blue}</p>
+      <p>Purple Color: {purple}</p>
+
+      <button onClick={changeMeBlack}>Black</button>
+      <button onClick={changeMeBlue}>Blue</button>
+      <button onClick={changeMePurple}>Purple</button>
+
+      <div>The count is {count}</div>
+      {/* <button onClick={()=>{setCount(count+1)}}>Update Count</button> */}
+      <button onClick={changeMe}>Update Count</button>
+
     </>
-  )
+  );
 }
 
-export default App
+export default App;
