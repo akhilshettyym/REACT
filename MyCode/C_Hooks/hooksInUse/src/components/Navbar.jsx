@@ -1,4 +1,4 @@
-const Navbar = ({ color }) => {
+const Navbar = () => {
   return (
     <>
       {/* I am a Navbar of {color} color... heeh */}
