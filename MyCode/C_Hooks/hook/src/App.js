@@ -34,7 +34,7 @@ function App() {
   useEffect(() => {
     alert("Count was updated");
   }, [count]);
-  // The above useEffect will render twice because of strict mode in React 18. 
+  // The above useEffect will render twice because of strict mode in React 18.
 
   return (
     <>
