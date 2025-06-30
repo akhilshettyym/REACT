@@ -22,7 +22,7 @@ function UseState() {
 
     return (
         <>
-            <h1>I am React useState in {color}</h1>
+            <h6>I am React useState in {color}</h6>
             <p>Black Color: {black}</p>
             <p>Blue Color: {blue}</p>
             <p>Purple Color: {purple}</p>
