@@ -22,14 +22,15 @@ function UseState() {
 
     return (
         <>
+        <br/>
             <h6>I am React useState in {color}</h6>
             <p>Black Color: {black}</p>
             <p>Blue Color: {blue}</p>
             <p>Purple Color: {purple}</p>
 
-            <button onClick={changeMeBlack}>Black</button>
-            <button onClick={changeMeBlue}>Blue</button>
-            <button onClick={changeMePurple}>Purple</button>
+            <button type="button" class="btn btn-outline-success" onClick={changeMeBlack}>Black</button>
+            <button type="button" class="btn btn-outline-success" onClick={changeMeBlue}>Blue</button>
+            <button type="button" class="btn btn-outline-success" onClick={changeMePurple}>Purple</button>
         </>
     );
 }
