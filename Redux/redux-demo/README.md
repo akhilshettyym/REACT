@@ -1,8 +1,12 @@
+# REDUX
+
 Redux is a JavaScript library used for managing the state of an application, particularly in front-end development with libraries like React. 
 
 It provides a centralized store for application data, making it easier to manage and share state across different components, and enabling features like time-travel debugging and predictable state update.
 
-THREE CORE CONCEPTS :
+---
+
+## THREE CORE CONCEPTS :
 
 Entities :
 SHOP         -  Stores cakes on a shelf              -   CUSTOMER - But a cake.
@@ -17,6 +21,7 @@ SHOPKEEPER              =   REDUCER - Ties the store and actions togather.
 - An ACTION that describes the changes in the state of the application.
 - A REDUCER which actually carries out the state transition depending on the action.
 
+---
 
 ## First Principle :
 The state of the whole application is stores in an object tree within a single store.
@@ -28,6 +33,8 @@ Let's contradict we are tracking the number of ckes on the shelf.
     numberOfCakes : 10;
 }
 
+---
+
 ## Second Principle :
 The only way to change the state is to emit an action, an object describing what happened.
 To update the state of your app, you need to let Redux know about that with an action.
@@ -38,6 +45,8 @@ Let the shopKeeper know about our action - BUY_CAKE.
 {
     type : BUY_CAKE;
 }
+
+---
 
 ## Third Principle :
 To specify how the state tree is transformed by actions, you write pure reducers.
@@ -55,6 +64,7 @@ const reducer = (state, action) => {
     }
 }
 
+---
 
 ## REDUX STORE(STATE)  JAVASCRIPT APP  ACTION
 
@@ -62,3 +72,10 @@ Redux store is always subscribed to the App.
 But the app cannot directly change the state.
 The App should DISPATCH an Action.
 Once the action is DISPATCHED the REDUCER then updates the state.
+
+---
+
+# MIDDLEWARE
+
+- Is the suggested way to extend Redux with custom functionality.
+- Provides a third-party extension point between dispatching an action, and the moment it reaches the reducer.
