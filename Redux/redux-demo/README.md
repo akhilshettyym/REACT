@@ -79,3 +79,12 @@ Once the action is DISPATCHED the REDUCER then updates the state.
 
 - Is the suggested way to extend Redux with custom functionality.
 - Provides a third-party extension point between dispatching an action, and the moment it reaches the reducer.
+
+# ASYNC ACTION CREATORS
+
+## axios
+Requests to an API end point.
+
+## redux-thunk
+Define async creators
+Middleware
