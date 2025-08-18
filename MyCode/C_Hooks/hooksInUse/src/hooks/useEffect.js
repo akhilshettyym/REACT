@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 function UseEffect() {
 
     const [count] = useState(0);
-    //   useEffect hook pops an alert when it renders for the first time
+    //   useEffect hook pops an alert when it renders for the first time 
     useEffect(() => {
         alert("Welcome to React Hooks Example");
     }, []);
