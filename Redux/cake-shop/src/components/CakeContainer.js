@@ -2,7 +2,6 @@ import { connect } from 'react-redux'
 import { buyCake } from '../redux'
 
 function CakeContainer(props) {
-    console.log("PROPS :", props);
     return (
         <>
             {props.numOfCakes !== 0 && (

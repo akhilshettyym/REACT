@@ -1,14 +1,13 @@
-import { createStore, combineReducers } from 'redux'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
 import cakeReducer from './cake/cakeReducer'
 import iceReducer from './ice/iceReducer';
+import logger from 'redux-logger'
 
-// export const cakeStore = createStore(cakeReducer)
-// export const iceStore = createStore(iceReducer)
 const rootReducer = combineReducers({
     cake: cakeReducer,
     ice: iceReducer
 })
 
-const store = createStore(rootReducer)
+const store = createStore(rootReducer, applyMiddleware(logger))
 
 export default store;

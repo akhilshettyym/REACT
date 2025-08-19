@@ -2,7 +2,6 @@ import { connect } from 'react-redux'
 import { buyIce } from '../redux'
 
 function IceContainer(props) {
-    console.log("PROPS :", props);
     return (
         <>
             {props.numOfIce !== 0 && (

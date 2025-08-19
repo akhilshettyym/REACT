@@ -13,7 +13,7 @@
 }
 
 .numOfCakes {
-  padding-top: 350px;
+  padding-top: 250px;
   justify-content: center;
   display: grid;
   justify-items: center;
@@ -26,7 +26,12 @@
 }
 
 .numOfCakesHooks {
-  /* padding-top: 350px; */
+  justify-content: center;
+  display: grid;
+  justify-items: center;
+}
+
+.numOfCakesNew {
   justify-content: center;
   display: grid;
   justify-items: center;
@@ -49,4 +54,10 @@
   justify-content: center;
   display: grid;
   justify-items: center;
+}
+
+.input {
+  width: 150px;
+  height: 30px;
+  padding: 2px;
 }
