@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# REDUX
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Redux is a JavaScript library used for managing the state of an application, particularly in front-end development with libraries like React. 
 
-## Available Scripts
+It provides a centralized store for application data, making it easier to manage and share state across different components, and enabling features like time-travel debugging and predictable state update.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## THREE CORE CONCEPTS :
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Entities :
+SHOP         -  Stores cakes on a shelf              -   CUSTOMER - But a cake.
+SHOPKEEPER   -  At the front of the store            -   SHOPKEEPER - Remove a cake from the shelf
+CUSTOMER     -  At the store entrance                -   Receipt to keep track.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+SHOP                    =   STORE   - Holds the state of the application.
+INTENTION to BUY_CAKE   =   ACTION  - Describes what happened.
+SHOPKEEPER              =   REDUCER - Ties the store and actions togather.
 
-### `npm test`
+- A STORE that holds the state of your application.
+- An ACTION that describes the changes in the state of the application.
+- A REDUCER which actually carries out the state transition depending on the action.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## First Principle :
+The state of the whole application is stores in an object tree within a single store.
+Maintain our app state in a single object which would be managed by the Redux store.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Cake shop -
+Let's contradict we are tracking the number of ckes on the shelf.
+{
+    numberOfCakes : 10;
+}
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Second Principle :
+The only way to change the state is to emit an action, an object describing what happened.
+To update the state of your app, you need to let Redux know about that with an action.
+Not allowed to directly update the state object.
 
-### `npm run eject`
+Cake shop - 
+Let the shopKeeper know about our action - BUY_CAKE.
+{
+    type : BUY_CAKE;
+}
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Third Principle :
+To specify how the state tree is transformed by actions, you write pure reducers.
+Reducer - (prev state, action) => newState.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Cake shop - 
+Reducer is the shopkeeper. 
+When action is performed, cake count is reduced and a receipt is printed.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+const reducer = (state, action) => {
+    switch (action.type){
+        case BUY_CAKE: return {
+            numOfCakes: state.numOfCakes - 1;
+        }
+    }
+}
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## REDUX STORE(STATE)  JAVASCRIPT APP  ACTION
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Redux store is always subscribed to the App.
+But the app cannot directly change the state.
+The App should DISPATCH an Action.
+Once the action is DISPATCHED the REDUCER then updates the state.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# MIDDLEWARE
 
-### Analyzing the Bundle Size
+- Is the suggested way to extend Redux with custom functionality.
+- Provides a third-party extension point between dispatching an action, and the moment it reaches the reducer.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# ASYNC ACTION CREATORS
 
-### Making a Progressive Web App
+## axios
+Requests to an API end point.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## redux-thunk
+Define async creators
+Middleware
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### REACT REDUX + HOOKS
+- React Redux Pattern
+- Action creators, reducers, provide the store and connect the components.
+- Components can access state and dispatch actions.
+- React Redux v7.1
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Subscribe to store and dispatch actions without connect()
