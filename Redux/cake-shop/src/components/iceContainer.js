@@ -6,14 +6,14 @@ function IceContainer(props) {
     return (
         <>
             {props.numOfIce !== 0 && (
-                <div>
+                <div className='numOfIce'>
                     <h1>Number of Ice-Creams - {props.numOfIce}</h1>
                     <button className='button' onClick={props.buyIce}>Buy Ice</button>
                 </div>
             )}
 
             {props.numOfIce === 0 && (
-                <div>
+                <div className='errorIce'>
                     <h2>Sorry !!! Ice-Creams are out of stock...</h2>
                 </div>
             )}
