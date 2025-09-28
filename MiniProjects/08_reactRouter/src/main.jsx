@@ -1,6 +1,8 @@
 import { createRoutesFromElements } from 'react-router-dom';
-import { Home, About, Contact, Layout, StrictMode, createRoot, createBrowserRouter,
-        RouterProvider, Route, User, Github, githubInfoLoader} from './Imports';
+import {
+  Home, About, Contact, Layout, StrictMode, createRoot, createBrowserRouter,
+  RouterProvider, Route, User, Github, githubInfoLoader
+} from './Imports';
 
 
 // const router = createBrowserRouter([
@@ -30,11 +32,11 @@ const router = createBrowserRouter(
       <Route path='about' element={<About />} />
       <Route path='contact' element={<Contact />} />
       <Route path='user/:userid' element={<User />} />
-=
-      <Route 
-      loader={githubInfoLoader}
-      path='github' 
-      element={<Github />} />
+      =
+      <Route
+        loader={githubInfoLoader}
+        path='github'
+        element={<Github />} />
     </Route>
   )
 )
