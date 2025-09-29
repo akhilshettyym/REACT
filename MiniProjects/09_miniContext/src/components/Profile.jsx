@@ -1,4 +1,4 @@
-import React, { useContext } from "react";  
+import React, { useContext } from "react";
 import UserContext from "../context/userContext";
 
 function Profile() {
@@ -12,4 +12,4 @@ function Profile() {
     return <div>Welcome {user.username}</div>;
 }
 
-export default Profile;  
+export default Profile;
